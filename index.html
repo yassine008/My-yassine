@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>برنامج ياسين لليوم</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>برنامج ياسين لليوم</h1>
+        <table>
+            <tr>
+                <th>الوقت</th>
+                <th>النشاط</th>
+                <th>إكمال</th>
+            </tr>
+            <tr><td>09:00 - 10:00</td><td>لعب</td><td><button onclick="completeTask(this)">✔️</button></td></tr>
+            <tr><td>10:00 - 12:00</td><td>دراسة</td><td><button onclick="completeTask(this)">✔️</button></td></tr>
+            <tr><td>12:00 - 12:30</td><td>راحة وغداء</td><td><button onclick="showExercise()">🏋️</button></td></tr>
+            <tr><td>12:30 - 14:00</td><td>أعمال</td><td><button onclick="completeTask(this)">✔️</button></td></tr>
+            <tr><td>14:00 - 15:00</td><td>لعب</td><td><button onclick="completeTask(this)">✔️</button></td></tr>
+            <tr><td>15:00 - 16:00</td><td>حفظ القرآن</td><td><button onclick="completeTask(this)">✔️</button></td></tr>
+            <tr><td>16:00 - 17:00</td><td>راحة</td><td><button onclick="showExercise()">🏋️</button></td></tr>
+            <tr><td>17:00 - 18:30</td><td>دراسة</td><td><button onclick="completeTask(this)">✔️</button></td></tr>
+            <tr><td>18:30 - 19:00</td><td>صلاة وراحة</td><td><button onclick="completeTask(this)">✔️</button></td></tr>
+            <tr><td>19:00 - 20:00</td><td>أعمال</td><td><button onclick="completeTask(this)">✔️</button></td></tr>
+            <tr><td>20:00 - 21:00</td><td>لعب</td><td><button onclick="completeTask(this)">✔️</button></td></tr>
+            <tr><td>21:00 - 22:00</td><td>حفظ القرآن</td><td><button onclick="completeTask(this)">✔️</button></td></tr>
+            <tr><td>22:00 - 22:30</td><td>استرخاء</td><td><button onclick="showExercise()">🏋️</button></td></tr>
+            <tr><td>22:30</td><td>نوم</td><td>😴</td></tr>
+        </table>
+
+        <div class="buttons">
+            <button onclick="resetTasks()">🔄 إعادة المهام</button>
+            <button onclick="toggleNotes()">📝 المذكرة</button>
+            <button onclick="rateApp()">⭐ تقييم التطبيق</button>
+        </div>
+
+        <div id="notes-box" class="hidden">
+            <textarea id="notes" placeholder="اكتب ملاحظاتك هنا..."></textarea>
+            <button onclick="saveNotes()">💾 حفظ</button>
+        </div>
+
+        <div id="exercise-box" class="hidden">
+            <p>🚀 تمرين سريع: قم بـ 10 تمارين ضغط!</p>
+            <button onclick="hideExercise()">إغلاق</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
